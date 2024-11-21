@@ -79,3 +79,23 @@ async function startstep() {
 }
 
 startstep();
+
+//co the ket hop promise all
+
+function task1(){
+    return new Promise((resolve)=> setTimeout (()=> resolve("step1"),1000));
+}
+function task2(){
+    return new Promise((resolve)=> setTimeout (()=> resolve("step2"),5000));
+}
+
+async function maintask() { 
+    try{
+        let result=await Promise.all([task1,task2]);
+        console.log("all done",result);
+    }catch(error){
+        console.log(error);
+    }
+}
+
+maintask();
