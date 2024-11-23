@@ -18,3 +18,16 @@ var person = {
     hocsinh: true
 };
 console.log(person);
+// bai 4
+var Direction;
+(function (Direction) {
+    Direction["North"] = "North";
+    Direction["South"] = "South";
+    Direction["East"] = "East";
+    Direction["West"] = "West";
+})(Direction || (Direction = {}));
+function move(direction) {
+    console.log("".concat(direction));
+}
+move(Direction.North);
+move(Direction.East);

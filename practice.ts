@@ -10,7 +10,7 @@ console.log(hocsinh);
 console.log(mang);
 
 // bai 2
-function add(a:number,b:number) {
+function add(a:number,b:number): number {
     return a+b;
 }
 console.log(add(12,21));
@@ -29,3 +29,19 @@ let person : Person ={
 }
 
 console.log(person);
+
+// bai 4
+
+enum Direction{
+    North='North',
+    South='South',
+    East='East',
+    West='West',
+}
+
+function move(direction : Direction){
+    console.log(`${direction}`);
+}
+
+move(Direction.North);
+move(Direction.East);
