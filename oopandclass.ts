@@ -38,3 +38,5 @@ class Dog extends animal{
 
 let dog=new Dog('john');
 dog.speak();
+
+// tinh dong goi
